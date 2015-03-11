@@ -1,0 +1,23 @@
+/* SeeCMS is a website content management system
+// @author See Green <http://www.seegreen.uk>
+// @license http://www.seecms.net/seecms-licence.txt GNU GPL v3.0 License
+// @copyright 2015 See Green Media Ltd
+*/
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&subset=latin,cyrillic-ext,greek-ext,greek,vietnamese,latin-ext,cyrillic);
+.clear {display: block; clear: both;}
+
+.see-cms-tool {display: block; height: 29px; width: 29px; padding: 7px; background: #383838;position: absolute; top: 0; left: 150px;}
+.see-cms-tool span {display: block; height: 29px; width: 29px; background: url(../images/toolbar-icon.png) no-repeat 0 0;  transform: rotate(-360deg );            
+    transition: transform 0.5s ease; cursor: pointer; }
+.spin span{ transform: rotate( -180deg ); transition: transform 0.5s ease; }
+
+.see-cms-logo {display: block; background: #383838 url(../images/logo.gif) no-repeat center center; width: 134px; height: 51px;  cursor: pointer;}
+.see-cms-toolbar {width: 134px; position: fixed; top: 0; left: -150px; padding: 9px 8px; background: #383838; display: block; width: 134px; z-index: 99999999999999999;  height: 100%;}
+.see-cms-toolbar a { color: #fff !important; font-family: 'Open Sans', arial, sans-serif;  font-size: 14px; line-height: 120%; display: block; margin: 0 0 20px 0;}
+.see-cms-toolbar a:hover { color: #fff !important; }
+.see-cms-toolbar span { color: #fff; font-family: 'Open Sans', arial, sans-serif;  font-size: 14px; line-height: 100%;}
+.see-cms-toolbar p {float: right; display: block; color: #fff; font-family: 'Open Sans', arial, sans-serif; padding: 0; font-size: 14px;  line-height: 130%;}
+a#see-cms-settings {padding: 3px 5px 0 50px; background: url(../images/settings-icon.png) no-repeat 0 0; height: 36px;}
+a#see-cms-edit {padding: 3px 5px 0 50px; background: url(../images/edit-icon.png) no-repeat 0 0; height: 36px;}
+a#see-cms-back {padding: 3px 5px 0 50px; background: url(../images/screen-icon.png) no-repeat 0 0; height: 36px;}
