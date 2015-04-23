@@ -1,0 +1,37 @@
+#seecmsshopbasket .col1 {width: 28%; padding: 0 2% 0 0; margin: 0; min-width: 10px;}
+#seecmsshopbasket .colwrap h2 {border: none; padding: 0; margin: 0 0 12px 0;}
+#seecmsshopbasket .colwrap {width: 70%; padding: 0; margin: 0; min-width:10px; max-width: 70%; float: left;}
+#seecmsshopbasket .col2 {width: 60%; padding: 0; margin: 0; min-width:10px; max-width: 60%;}
+#seecmsshopbasket .col3 {width: 20%; padding: 0; margin: 0; min-width:10px; max-width: 20%;}
+#seecmsshopbasket .col4 {width: 20%; padding: 0; margin: 0; min-width:10px; max-width: 20%; float: left;}
+
+hr.divider {width: 100%; clear: none; float: left; margin: 0 0 12px 0;}
+.delivery {margin-top: 12px; border-top: 1px solid #383838; padding-top: 12px;}
+
+.categoriestab { display: none; }
+
+.productnav ul {margin: 0 0 12px 0; padding: 0; border-bottom: 1px solid #383838;}
+.productnav li {margin: 0 2px 0 0; list-style: none; display: block; float: left; background: #585858; border-radius: 5px 5px 0 0;}
+.productnav li.selected { background: #383838; }
+.productnav li a{color: #ccc; padding: 10px 20px; display: block;}
+.productnav li.selected a {color: #fff;}
+
+.producttab .mce-tinymce {margin: 0 0 10px 0; border: 1px solid #383838;}
+.producttab input[type="text"], .producttab textarea {width: 100%; border: 1px solid #383838; border-radius: 5px; padding: 4px 2%; box-sizing: border-box; display: block; margin: 0 0 10px 0;}
+.producttab textarea {height: 100px;}
+.producttab select {width: 100%; border: 1px solid #383838; border-radius: 5px; padding: 0 2%; box-sizing: border-box; display: block; margin: 0 0 10px 0;}
+.producttab span.checkbox {margin: 0 10px 0 -20px;}
+
+.parentcat .parentcat { padding: 10px; border-radius: 5px; background: #ccc; margin: 0 0 10px 0;}
+.parentcat .parentcat .parentcat{ padding: 10px; border-radius: 5px; background: #aaa; margin: 0 0 10px 0;}
+
+input.save {float: none;}
+.viewproduct, .addproduct {background: #c2d347; width: 94%; border: none; text-align: left; padding: 0 3%; display: block; margin: 0 0 7px 0; cursor: pointer;color: #383838; text-decoration: none; 
+line-height: 40px; height: 40px; border-radius: 5px; margin-right: 1%;}
+.viewproduct:hover, .addproduct:hover {background: #8d9a26; text-decoration: none;}
+
+.fieldtype-checkbox p {float: left; margin: 0 10px 12px 0;}
+
+#status-ok, #status-failed {display: block; float: right; width: 26px; height: 26px;}
+#status-ok {background: url(../../seecms/images/shop/icon-status-ok.png) no-repeat 0 0;}
+#status-failed {background: url(../../seecms/images/shop/icon-status-failed.png) no-repeat 0 0;}
