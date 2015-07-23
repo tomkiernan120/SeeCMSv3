@@ -15,7 +15,7 @@ class SeeFormatController {
       $input = strtotime( $input );
     }
     
-    if( $input >= 0 ) {
+    if( $input && $input >= 0 ) {
       return( date( $setting, $input ) );
     }
   }
