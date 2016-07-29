@@ -1,111 +1,255 @@
 # SeeCMSv3
 SeeCMS Content Management System
 
-v3.4 release notes
+Release notes
 
-This update includes the following fixes and improvements
 
-Add ons
-- Fixed styling bug with the add on list
 
-ADFs
-- Updated loadLinkDetails method to return whole object in addition to other data for download links
-- Fixed scroll issue when selecting content
-- Fixed bug with ADF link URLS which including a hyphen being truncated
-- Fixed bug with ADF popup not loading in some circumstances
-- Fixed bug with adfMediaFolder selection option failure where there were multiple fields of that type on one page
-- Fixed bug with cascaded field not appearing on the main page as it should
-- Fixed bug with removing an ADF image from a set
-- Fixed bug with problem saving ADF set if a set was removed containing a tinymce
+v3.463
 
-Analytics
-- Added caching of previous monthly data
-- Updated view to exclude items which don't now exist
-- Updated view with various display improvements
-- Fixed bug with previous monthly data not loading
+Updates
 
-Downloads
-- Added support for downloads to to loaded inline
-- Changed process order to check status before access
-- Fixed bug with document status not working
-- Fixed bug with redirect to login page not working for secured files
-- Fixed bug with permission inheritance not applying correctly on uploaded files
-- Fixed bug causing downloads not to track in analytics
-- Fixed bug with uploader on old browsers
+Posts:
 
-Hooks
-- Added support for hooks
+- Restored missing icon in posts
 
-Media
-- Added ADF support to media
-- Added on the fly creation of missing media and removed the bulk creation on upload
-- Added selectable field in DB to allow image sizes to be hidden from user selection
-- Fixed bug stopping media edits saving
-- Fixed bug with uploader on old browsers
+RTE (Rich Text Editor):
 
-Pages
-- Added nextPage method
-- Added missing option to remove a page redirect
-- Fixed bug with exclude ADF option for pages
-- Fixed bug with page reordering within the same list/parent
+- Fixed iPad issues with editing text and adding images
 
-Posts
-- Added ADF support to posts
-- Added option to feed method to allow results to be paged
-- Added option to feed method to allow ordering
-- Added id into data returned by post feed method
-- Added support for forcing a specific template for posts in a category
-- Added missing custom edit fields which were missing from posts
-- Updated feed method to include post categories and whole post object in return data
-- Updated CMS view to show eventStartDate rather than date if it's set
-- Fixed bug saving undated posts
 
-Rich Text Editor
-- Added option to allow custom CSS in TinyMCE
-- Fixed bug with inserting original image size
-- Fixed bug where rich text editor popup was attached to content part which didn't appear on the page meaning content wasn't editable
 
-Search
-- Added websiteUsers to admin search
+v3.462
 
-SeePHP / CORE
-- Updated core include to use require_once instead of include to overcome chain include problems in some third party plugins
+Updates
 
-SeePHP / Email
-- Added option to allow email attachment content to be passed directly, rather than it having to be a file on disk
-- Improved sendHTMLEmail method with updated headers/boundaries to resolve issues with some email systems
+Downloads:
 
-SeePHP / Format
-- Fixed problem with date method on Unix servers caused by strtotime returning negative integers where the dates are pre Unix Epoch
+- Restored missing icon to move downloads
 
-SeePHP / Form Process
-- Add a setting ['introHTML'] to allow extra content to be sent in the message
-- Removed the -SeeFormProcess-sendByEmail- input from the email
-- Fixed bug with bad HTML in message
 
-SeePHP / HTML
-- Updated meta method to stop duplicate meta tags and allow overrides
 
-SeePHP / HTML Form
-- Fixed bug with action path when page was loaded without ending /
+v3.461
 
-SeePHP / Image
-- Fixed bug with PNG transparency
+Updates
 
-SeePHP / Social
-- Updated getTweets method to include tweet id and media url in return data
+Pages:
 
-Website users
-- Fixed bug with loading ADFs for a website user on login
-- Fixed bug when updating website user caused error when any field was not included in the POST data
-- Fixed bug with removing users from groups
-- Fixed problem with login redirects being unset where the login page contained a GET parameter
+- Fixed bug stopping creation/moving of pages at top level
 
--- 
+RTE Content:
 
-Other
-- Added doc and xlsx icons
-- Added XML Sitemap as standard /xmlsitemap/
-- Added generator, description and keywords meta by default to pages/posts
-- Changed name of IIS rewrite rule to SeeCMS (Only on new installs)
-- Fix minor issue in breadcrumb html 
+- Fixed bug caused by old version of libxml on some servers stopping content saving
+
+
+
+v3.46
+
+Updates
+
+Admin users:
+
+- Allow admin permission setting to be json encoded instead of serialising
+- Added beta version of advanced editing permissions
+
+Images:
+
+- Added option to allow a colour overlay to be automatically added to images
+
+Misc/CMS Styling:
+
+- Updated CMS theme to use font icons
+- Added AI and PSD icons to the CMS for download files
+- Added new edit page sidebar option to allow edit points to be hidden on perview
+
+Sessions:
+
+- Added session manager
+
+Template manager:
+
+- Fixed functionality regression
+
+Website users:
+
+- Fixed bug in user activation link
+- Added option to allow setting a default order of users in CMS
+
+
+
+v3.451
+
+Updates
+
+Update tool:
+
+- Updated to allow additional directory creation
+This update requires the update script to run again to continue after this update. Please check for further updates after installing this one.
+
+
+v3.45
+
+Updates
+
+ADFs:
+
+- Fixed problem with ADF link selector for in page ADFs
+
+
+Posts:
+
+- Added option to duplicate a post
+- Fixed problem with & in RSS feed
+
+
+
+v3.44
+
+Updates
+
+ADFs:
+
+- Fixed problem with ADF content loading from a page when the viewpart is in a post
+- Allowed ADF data on websiteUsers
+- Allowed ADFs to be loaded with a post field
+- Various improvements to in page ADFs
+- Added option to loadADFContent to load from an ascendant at a specific level, setting ascendant = 1 in config with load the ADF content from the top level page the current page belongs to
+- Fixed bug with speech marks in text content causing field to show blank
+
+CSV:
+
+- Added new core CSV controller, to create and read CSV files
+
+Downloads:
+
+- Added the ability to add categories in the database for downloads
+- Fixed bug with inline files which affected files which couldn’t open inline
+- Added the download URL to the download edit screen
+- Allow download folder list to open and close folders/sub folders
+- Updated downloads screen in the CMS to show folder name in heading bar
+- Improved speed of loading the list in the CMS
+
+Forms:
+
+- Added new option to built-in sendByEmail method to allow styling of the table:
+$formSettings['controller']['settings']['style']['th'] = "text-align: left; background: #905500; color: #ffffff; padding: 4px;";
+$formSettings['controller']['settings']['style']['td'] = "text-align: left; background: #F4A640; color: #000000; padding: 4px;";
+- Added new option to exclude fields from the email: 
+$formSettings['controller']['settings']['excludeField']['address3'] = true;
+
+Helpers: 
+
+- Updated to include post titles in breadcrumb
+
+Media:
+
+- Added extra options to image size settings for classes and duping
+- Added options to allow manual cropping of images from within the CMS
+- Added option to allow replacement of a media file with a new one, this replaces all occurrences throughout the website
+- Updated media screen in the CMS to show folder name in heading bar
+- Allowed download folder list to open and close folders/sub folders
+- Added ‘friendlyImageURLs’ setting, on by default in new installations. This changes the standard images paths: ie /img-4-4.jpg, to /4/4/imageNameHere.jpg
+
+Misc/CMS Styling:
+
+- Fixed the Core/Cache/Save method so it stops the system trying to cache files with php GET parameters
+- Added AI and PSD icons to the CMS for download files
+- Tweaked padding on folder list
+- Added a new button to the header that allows the user to go straight to their live website
+- Fixed the issue with posts and media folder names going behind the icons and also fixed the height styling problems
+- Added an update alert to the header of the CMS to alert users that there is a new version ready to download
+- Changed layout and style of the CMS login screen
+- Removed the hardcoded ‘Folder name’ text
+- Added styling to image names on hover so that if it is too long it adds ‘...’ to the end 
+- Fixed secure icon not fading properly when moving folders
+- Allow download folder list to open and close folders/sub folders
+- Updates to allow future API expansion
+- Improvements to site slideout toolbar
+- Added option for new editbar in preview/edit mode
+
+Multisite:
+
+- Added support for multiple sites within one CMS
+
+Pages:
+
+- Added a new ‘Open live page’ button to the edit page in the CMS which allows users to view individual pages as if they were live on the site
+- Added support for cloning pages (this clones the content of one page to another, updating the master page then also updates the clone)
+- Added support for ‘onlyShowIfUserHasAccess’ setting on navigation, this will stop links to pages showing if the user doesn’t have access, ie not logged in or is logged in but with permission to view that page
+- Added support for plugins to extend the edit page screen
+- Improved the move page function to increase speed
+- Fixed bug with speech marks in page title causing field to show blank
+
+--
+
+Posts:
+
+- List post categories in alphabetic order in the CMS post edit screen
+- Updated to allow setting of a parent page for post types, so you don’t need to have a category if you don’t want
+- Updated the archiveList method so it takes into account the post category, and allows setting of showing months for all years or just the current selected year
+- Added a new ‘Open live post button to the edit page in the CMS which allows users to view individual posts as if they were live on the site
+- Allowed ADFs to be loaded with a post field
+- Allowed file uploads in custom post types
+- Updated posts screen in the CMS to show folder name in heading bar
+- Allowed creation of redirects from posts
+- Fix bug with news archive method breaking if there are no posts
+- Added option to posts feed method to allow only future events to be shown: ‘futureEventsOnly’
+- Updated posts feed to allow a feed where a post has to be in multiple categories
+- Fixed bug with speech marks in post title causing field to show blank
+
+--
+
+Routes:
+
+- Allowed routing to plugin methods
+
+--
+
+RTE (Rich Text Editor):
+
+- Updated implementation to allow custom styles, these are defined in the DB setting table: additionalRTEStyles' in format {title: 'Test', block: 'p', attributes :
+{'class': 'yaay'}},{title: 'PRE', block: 'pre' }
+- Implemented first release of a pre-save html parser, at the moment it just removes unwanted script tags, more updates to follow.
+
+--
+
+Search:
+
+- Completely rewritten the search method to give better search results and include additional data in results
+- Fixed search error caused by ADF content which is on a deleted page
+- Added an option to set specific inclusion of pages and post categories for site section searches
+- Allowed exclusion list for search results
+- Updated to also search meta description and keywords
+
+--
+
+Security:
+
+- Fixed bug which caused AES functionality to break in PHP5.6+ - sites installed prior to SeeCMS 3.44 will require a manual update to work on PHP5.6+
+
+--
+
+Site Users:
+
+- Added a new function to load the current user
+- Updated to allow the ‘Activation required’ setting to be passed through the form settings in addition to the database setting, and if both are set the form setting takes precedence
+- Added missing option to toggle website user status, and fixed auto add option on user groups to off by default
+- Added the option to be able to import/export website users from/to a CSV file 
+- Updated selfUpdate method to add the functionality
+- Automatically notify an admin via email when someone registers
+- Allow setting of activation details
+- Allowed ADF data on websiteUsers
+- Added option to allow configuration of which fields display on the site users list in the CMS
+
+--
+
+Statistics:
+
+- Fixed minor display issue on the browser visits
+
+--
+
+Theme: 
+
+- Fixed problem with SeeCMS 2015 theme installed missing templates
+- Fixed minor bug in SeeCMS 2015 theme where the contactform viewpart caused a validation error
