@@ -1,13 +1,11 @@
 # SeeCMSv3
 SeeCMS Content Management System
 
-Release notes
+## Release notes
 
 
 
-v3.463
-
-Updates
+### v3.463
 
 Posts:
 
@@ -19,9 +17,7 @@ RTE (Rich Text Editor):
 
 
 
-v3.462
-
-Updates
+### v3.462
 
 Downloads:
 
@@ -29,9 +25,7 @@ Downloads:
 
 
 
-v3.461
-
-Updates
+### v3.461
 
 Pages:
 
@@ -43,9 +37,7 @@ RTE Content:
 
 
 
-v3.46
-
-Updates
+### v3.46
 
 Admin users:
 
@@ -77,9 +69,7 @@ Website users:
 
 
 
-v3.451
-
-Updates
+### v3.451
 
 Update tool:
 
@@ -87,9 +77,7 @@ Update tool:
 This update requires the update script to run again to continue after this update. Please check for further updates after installing this one.
 
 
-v3.45
-
-Updates
+### v3.45
 
 ADFs:
 
@@ -103,9 +91,7 @@ Posts:
 
 
 
-v3.44
-
-Updates
+### v3.44
 
 ADFs:
 
